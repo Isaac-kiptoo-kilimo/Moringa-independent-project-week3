@@ -1,14 +1,45 @@
-const questions_holder = document.getElementById('questions')
+
 const my_answers = []
+let answered = 0;
+let uanswered = 0; 
 
 questions.slice().map((question, index) => {
     my_answers.push({quiz_id: question.id, answer_id: null})
 })
 
+function getAnsweredUnanswered(){
+// console.log("checking")
+
+    // my_answers.map(answer => {
+    //     // console.log(answer)
+    //     if(answer.answer_id !== null){
+    //         answered += 1;
+    //     }
+    //     else{
+    //         uanswered += 1;
+    //     }
+    // })
+    const answered_ = my_answers.filter(a => a.answer_id !== null)
+    const uanswered_ = my_answers.filter(a => a.answer_id === null)
+
+    for (let index = 0; index < answered_txt.length; index++) {
+        const element = answered_txt[index];
+        element.innerHTML = answered_.length
+        
+    }
+
+    for (let index = 0; index < unanswered_txt.length; index++) {
+        const element = unanswered_txt[index];
+        element.innerHTML = uanswered_.length
+        
+    }
+}
+
+
 const selectAnswer = (quiz_id, answer_id) => {
     const ans_ = my_answers.find(ans__ => ans__.quiz_id === quiz_id)
     ans_.answer_id = answer_id
-    console.log(my_answers)
+    getAnsweredUnanswered()
 }
 
 function escapeHTML(s) {
@@ -43,7 +74,7 @@ const single_question = (question) => {
     const quiz_div =   `
             <div class="question">
                 <p>${question.id}. ${escapeHTML(question.question)} </p>
-                <div class="answers">                 
+                questions         <div class="answers">                 
                     ${answers}
                 </div>
             </div>
