@@ -80,6 +80,24 @@ const single_block_question = (question) => {
     for(let i = 0; i < question.answers.length; i ++){
         answers += answer(question.id, question.answers[i])
     }
+
+    let next_quiz = null;
+    let prev_quiz = null;
+
+    if(question.id === 1){
+        prev_quiz = null
+    }
+    else{
+        prev_quiz = question.id - 1
+    }
+
+    if(question.id === 20){
+        next_quiz = null
+    }
+    else{
+        next_quiz = question.id + 1
+    }
+
     const quiz_div =   `
         <div class="question">
             <p>${question.id}. ${escapeHTML(question.question)} </p>
@@ -90,9 +108,9 @@ const single_block_question = (question) => {
         </div>
         
         <div class="group-buttons">
-            <a href="javascript:void(0)" class="common-btn blue">PREVIOUS QUESTION</a>
+            <a href="javascript:void(0)" onclick="${prev_quiz && `renderSingleQuestion(${prev_quiz})`}" class="common-btn blue">PREVIOUS QUESTION</a>
             <a href="javascript:void(0)" class="common-btn blue">1/20</a>
-            <a href="javascript:void(0)" class="common-btn blue">NEXT QUESTION</a>
+            <a href="javascript:void(0)" onclick="${next_quiz && `renderSingleQuestion(${next_quiz})`}" class="common-btn blue">NEXT QUESTION</a>
         </div>
     `;
 
