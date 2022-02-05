@@ -19,6 +19,7 @@ const logout = () => {
 const displayAfterLogin  = () => {
     login_holder.classList.add('d-none')
     body_holder.classList.remove('d-none')
+    populateAnswerSheet()
 }
 
 login_form.addEventListener('submit', e => {

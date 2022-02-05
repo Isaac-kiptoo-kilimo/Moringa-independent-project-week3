@@ -13,6 +13,9 @@ function calculatePercentageAndComment(correct_questions_count){
         color_: '',
         message: '' 
     }
+    if(percentage < 80){
+        retake_.classList.remove('d-none')
+    }
     if(percentage > 79){
         comment.message = 'You passed'
         comment.color_ = 'success'
@@ -67,10 +70,10 @@ function submitForGrading(e){
     const unanswered_ = my_answers.filter(a => a.answer_id === null)
 
 
-    if(unanswered_.length > 0 ){
-        alert("You have not answered all the questions")
-    }
-    else{
+    // if(unanswered_.length > 0 ){
+    //     alert("You have not answered all the questions")
+    // }
+    // else{
         const score = calculateScore()
         const output = calculatePercentageAndComment(score.correct)
 
@@ -85,5 +88,13 @@ function submitForGrading(e){
             const element = score_txt[index];
             element.innerHTML = score.correct 
         }
-    }
+    // }
+}
+
+
+function retake(){
+    // my_answers = []
+    body_holder.classList.remove('d-none')
+    results_holder.classList.add('d-none')
+    populateAnswerSheet()
 }

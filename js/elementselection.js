@@ -22,6 +22,8 @@ const login_form = document.getElementById("login-form")
 const username = document.getElementById('name')
 const regNo = document.getElementById('regNo')
 
+const retake_ = document.getElementById('retake')
+
 
 let selectedDisplayStyle = "list";
 

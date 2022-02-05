@@ -183,6 +183,12 @@ body{
 	width: 200px;
 }
 
+.retake-btn{
+	background-color: red;
+	color: white;
+	padding: 16px 25px;
+}
+
 
 .text-holder{
 	display: flex;

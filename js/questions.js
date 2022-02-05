@@ -1,13 +1,12 @@
-const my_answers = []
+let my_answers = []
 
 function populateAnswerSheet(){
+    my_answers = []
     questions.slice().map((question, index) => {
-        // console.log(question.id)
         my_answers.push({quiz_id: question.id, answer_id: null})
     })
 }
 
-populateAnswerSheet()
 
 function getAnsweredUnanswered(){
 
