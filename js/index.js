@@ -15,6 +15,7 @@ function answers(answers_){
 		if(ans_[i].trim()){
 			// console.log(i, ans_[i].split('=')[0], ans_[i].split('=')[1])
 			ans_array.push({
+				id: i,
 				answer: ans_[i].split('=')[1] && ans_[i].split('=')[0].trim().replace(/:/g, "="),
 				correct: ans_[i].split('=')[1] && ans_[i].split('=')[1].trim() === 'true' ? true : false
 			})
