@@ -158,6 +158,7 @@ body{
 .results-inner-comment, .results-inner-msg{
 	font-size: 38px;
 	margin: 20px 0;
+	text-transform: uppercase;
 }
 
 .results-inner-percentage{

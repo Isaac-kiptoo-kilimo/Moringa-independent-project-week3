@@ -74,6 +74,9 @@ function submitForGrading(e){
         const score = calculateScore()
         const output = calculatePercentageAndComment(score.correct)
 
+        results_holder.classList.remove('d-none')
+        body_holder.classList.add('d-none')
+
         results_percentage.innerHTML = `${output.percentage}%`
         results_comment.innerHTML = output.comment.message
         results_comment.classList.add(output.comment.color_)

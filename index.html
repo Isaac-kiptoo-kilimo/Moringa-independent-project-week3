@@ -15,14 +15,14 @@
 	<div class="login" id="login-holder">
 		<div class="form-holder">
 			<h2>Enter your details to start test</h2>
-			<form>
+			<form id="login-form">
 				<div class="input-holder">
 					<label for="name"><strong>Name</strong></label>
 					<input type="text" name="name" id="name" placeholder="Name">
 				</div>
 				<div class="input-holder">
 					<label for="regno"><strong>Reg No.</strong></label>
-					<input type="text" name="regno" id="regno" placeholder="Eg MMP24">
+					<input type="text" name="regno" id="regNo" placeholder="Eg MMP24">
 				</div>
 				
 				<div class="input-holder">
@@ -33,7 +33,7 @@
 	</div>
 
 
-	<div class="results" id="results-holder">
+	<div class="results d-none" id="results-holder">
 		<div class="results-left">
 			<div class="common-card">
 				<div class="common-card-wrapper">
@@ -90,7 +90,7 @@
 		</div>
 	</div>
 
-	<div class="body" id="body-holder">
+	<div class="body d-none" id="body-holder">
 		<div class="body-left">
 			<div class="switcher">
 				<div class="block-switcher" id="block" onclick="onClickSelectActiveSwitch('block')">
@@ -163,6 +163,7 @@
 	</div>
 
 <script src="js/elementselection.js"></script>
+<script src="js/login.js"></script>
 <script src="js/index.js"></script>
 <script src="js/questions.js"></script>
 <script src="js/blocklistswitcher.js"></script>
