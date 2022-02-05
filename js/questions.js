@@ -1,10 +1,15 @@
 
 const my_answers = []
 
-questions.slice().map((question, index) => {
-    my_answers.push({quiz_id: question.id, answer_id: null})
-})
+function populateAnswerSheet(){
+    questions.slice().map((question, index) => {
+        // console.log(question.id)
+        my_answers.push({quiz_id: question.id, answer_id: null})
+    })
+}
 
+populateAnswerSheet()
+console.log(my_answers)
 function getAnsweredUnanswered(){
 
     const answered_ = my_answers.filter(a => a.answer_id !== null)
