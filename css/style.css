@@ -64,7 +64,6 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	display: none;
 }
 
 .form-holder{
@@ -72,7 +71,6 @@ body{
 	padding: 20px;
 	box-shadow: var(--box-shadow);
 	border-radius: 20px;
-	/* display: none; */
 }
 
 .form-holder h2{
@@ -124,7 +122,6 @@ body{
 .results{
 	display: flex;
 	flex: 1;
-	display: none;
 }
 
 .body .body-left, .results .results-left{
@@ -272,4 +269,8 @@ body{
 	justify-content: center;
 	flex-direction: row;
 	padding: 20px 0;
+}
+
+.d-none{
+	display: none;
 }

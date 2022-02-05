@@ -10,3 +10,11 @@ const listSwitch = document.getElementById('list')
 const blockSwitch = document.getElementById('block')
 
 let selectedDisplayStyle = "list";
+
+const login_holder = document.getElementById('login-holder')
+const results_holder = document.getElementById('results-holder')
+const body_holder = document.getElementById('body-holder')
+
+
+const results_percentage = document.getElementById('results-percentage')
+const results_comment = document.getElementById('results-comment')

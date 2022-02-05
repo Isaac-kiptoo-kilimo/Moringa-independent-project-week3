@@ -109,7 +109,7 @@ const single_block_question = (question) => {
         
         <div class="group-buttons">
             <a href="javascript:void(0)" onclick="${prev_quiz && `renderSingleQuestion(${prev_quiz})`}" class="common-btn blue">PREVIOUS QUESTION</a>
-            <a href="javascript:void(0)" class="common-btn blue">1/20</a>
+            <a href="javascript:void(0)" class="common-btn blue">${question.id}/20</a>
             <a href="javascript:void(0)" onclick="${next_quiz && `renderSingleQuestion(${next_quiz})`}" class="common-btn blue">NEXT QUESTION</a>
         </div>
     `;
@@ -130,13 +130,11 @@ function renderAllQuestions(){
 
 function renderSingleQuestion(quiz_id){
     const quizz = questions.find(question => question.id === quiz_id)
-    console.log(quizz)
     if(quizz){
         questions_holder.innerHTML = " " + single_block_question(quizz)
     }
     else{
         alert("The questions does not exist")
     }
-    // questions_holder.innerHTML = "single question"
 }
 

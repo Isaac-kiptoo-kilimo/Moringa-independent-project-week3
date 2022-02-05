@@ -6,6 +6,32 @@ function getMyAnswer(question_id){
     return ans_from_my_answers
 }
 
+function calculatePercentageAndComment(correct_questions_count){
+
+    const percentage = Math.round(correct_questions_count / 20 * 100)
+    let comment = {
+        color_: '',
+        message: '' 
+    }
+    if(percentage > 79){
+        comment.message = 'You passed'
+        comment.color_ = 'success'
+    }
+    else if(percentage > 49){
+        comment.message = 'Fairly passed'
+        comment.color_ = 'fair'
+    }
+    else{
+        comment.message = 'You failed'
+        comment.color_ = 'poor'
+    }
+
+    return {
+        percentage, comment
+    }
+
+}
+
 
 function calculateScore(){
     let correct = 0;
@@ -46,6 +72,11 @@ function submitForGrading(e){
     }
     else{
         const score = calculateScore()
+        const output = calculatePercentageAndComment(score.correct)
+
+        results_percentage.innerHTML = `${output.percentage}%`
+        results_comment.innerHTML = output.comment.message
+        results_comment.classList.add(output.comment.color_)
 
         for (let index = 0; index < score_txt.length; index++) {
             const element = score_txt[index];

@@ -12,7 +12,7 @@
 		<h1> QUIZ BOARD </h1>
 	</div>
 
-	<div class="login">
+	<div class="login" id="login-holder">
 		<div class="form-holder">
 			<h2>Enter your details to start test</h2>
 			<form>
@@ -33,16 +33,19 @@
 	</div>
 
 
-	<div class="results">
+	<div class="results" id="results-holder">
 		<div class="results-left">
 			<div class="common-card">
 				<div class="common-card-wrapper">
 					<div class="results-inner">
-						<p class="results-inner-msg">Your score was 15/20</p>
+						<p class="results-inner-msg">
+							Your score: 
+							<span class="score-txt">0</span>/20
+						</p>
 						<div class="results-inner-percentage">
-							75%
+							<span id="results-percentage">0%</span>
 						</div>
-						<p class="results-inner-comment fair">FAIRLY PASSED</p>
+						<p class="results-inner-comment" id="results-comment">FAIRLY PASSED</p>
 					</div>
 				</div>
 			</div>
@@ -87,7 +90,7 @@
 		</div>
 	</div>
 
-	<div class="body">
+	<div class="body" id="body-holder">
 		<div class="body-left">
 			<div class="switcher">
 				<div class="block-switcher" id="block" onclick="onClickSelectActiveSwitch('block')">
