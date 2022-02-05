@@ -1,4 +1,3 @@
-
 const my_answers = []
 
 function populateAnswerSheet(){
@@ -9,7 +8,7 @@ function populateAnswerSheet(){
 }
 
 populateAnswerSheet()
-console.log(my_answers)
+
 function getAnsweredUnanswered(){
 
     const answered_ = my_answers.filter(a => a.answer_id !== null)
@@ -66,13 +65,39 @@ const single_question = (question) => {
     const quiz_div =   `
             <div class="question">
                 <p>${question.id}. ${escapeHTML(question.question)} </p>
-                questions         <div class="answers">                 
+                         
+                <div class="answers">                 
                     ${answers}
                 </div>
             </div>
     `;
 
     return quiz_div
+}
+
+const single_block_question = (question) => {
+    let answers = '';
+    for(let i = 0; i < question.answers.length; i ++){
+        answers += answer(question.id, question.answers[i])
+    }
+    const quiz_div =   `
+        <div class="question">
+            <p>${question.id}. ${escapeHTML(question.question)} </p>
+                    
+            <div class="answers">                 
+                ${answers}
+            </div>
+        </div>
+        
+        <div class="group-buttons">
+            <a href="javascript:void(0)" class="common-btn blue">PREVIOUS QUESTION</a>
+            <a href="javascript:void(0)" class="common-btn blue">1/20</a>
+            <a href="javascript:void(0)" class="common-btn blue">NEXT QUESTION</a>
+        </div>
+    `;
+
+    return quiz_div
+
 }
 
 
@@ -85,4 +110,15 @@ function renderAllQuestions(){
     questions_holder.innerHTML = questions_to_render
 }
 
-renderAllQuestions()
+function renderSingleQuestion(quiz_id){
+    const quizz = questions.find(question => question.id === quiz_id)
+    console.log(quizz)
+    if(quizz){
+        questions_holder.innerHTML = " " + single_block_question(quizz)
+    }
+    else{
+        alert("The questions does not exist")
+    }
+    // questions_holder.innerHTML = "single question"
+}
+

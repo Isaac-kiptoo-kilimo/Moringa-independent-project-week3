@@ -5,3 +5,8 @@ const score_txt = document.querySelectorAll('.score-txt')
 
 const questions_holder = document.getElementById('questions')
 const quiz_form = document.getElementById('quiz-form')
+
+const listSwitch = document.getElementById('list')
+const blockSwitch = document.getElementById('block')
+
+let selectedDisplayStyle = "list";

@@ -113,6 +113,7 @@ body{
 	font-size: 20px;
 	margin-top: 20px;
 	cursor: pointer;
+	text-decoration: none;
 }
 
 .body{
@@ -255,4 +256,20 @@ body{
 
 .active-switch{
 	border: 2px solid var(--primary-color);
+}
+
+.group-buttons{
+	display: flex;
+	justify-content: space-between;
+}
+
+.blue{
+	background-color: var(--primary-color);
+}
+
+.submit{
+	width: 100%;		
+	justify-content: center;
+	flex-direction: row;
+	padding: 20px 0;
 }

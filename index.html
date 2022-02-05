@@ -90,10 +90,10 @@
 	<div class="body">
 		<div class="body-left">
 			<div class="switcher">
-				<div class="block-switcher active-switch">
+				<div class="block-switcher" id="block" onclick="onClickSelectActiveSwitch('block')">
 					<div class="block-switch"></div>
 				</div>
-				<div class="list-switcher">
+				<div class="list-switcher" id="list" onclick="onClickSelectActiveSwitch('list')">
 					<div class="list-switch"></div>
 					<div class="list-switch"></div>
 					<div class="list-switch"></div>
@@ -101,22 +101,30 @@
 			</div>
 			<form class="questions" id="quiz-form">
 				<div id="questions">
-
-				</div>
-				<!-- <div class="question">
-					<p>1. What does HTML stand for</p>
-					<div class="answers">
-						<div class="answer-holder">	
-							<input type="radio" name="quiz_1"/>
-							<label for="" class="answer_label">Hyper Text Language</label>
-						</div>
-						<div class="answer-holder">	
-							<input type="radio" name="quiz_1"/>
-							<label for="" class="answer_label">Hyper Text Language</label>
+					<!-- Div to hold questions -->
+					<!-- <div class="questions">
+						<p>${question.id}. ${escapeHTML(question.question)} </p>
+						         
+						<div class="answers">                 
+							<div class="answer-holder">	
+								<input type="radio" name="quiz_${quiz_id}"/>
+								<label for="" class="answer_label">${escapeHTML(answer.answer)}</label>
+							</div>
+							<div class="answer-holder">	
+								<input type="radio" name="quiz_${quiz_id}"/>
+								<label for="" class="answer_label">${escapeHTML(answer.answer)}</label>
+							</div>
 						</div>
 					</div>
-				</div> -->
-				<div class="input-holder">
+
+					<div class="group-buttons">
+						<a href="javascript:void(0)" class="common-btn blue">PREVIOUS QUESTION</a>
+						<a href="javascript:void(0)" class="common-btn blue">1/20</a>
+						<a href="javascript:void(0)" class="common-btn blue">NEXT QUESTION</a>
+					</div> -->
+
+				</div>
+				<div class="input-holder submit">
 					<button class="common-btn continue-btn" >SUBMIT</button>
 				</div>
 			</form>
@@ -154,6 +162,7 @@
 <script src="js/elementselection.js"></script>
 <script src="js/index.js"></script>
 <script src="js/questions.js"></script>
+<script src="js/blocklistswitcher.js"></script>
 <script src="js/results.js"></script>
 </body>
 </html>
