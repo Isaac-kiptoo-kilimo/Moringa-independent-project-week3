@@ -1,24 +1,12 @@
 
 const my_answers = []
-let answered = 0;
-let uanswered = 0; 
 
 questions.slice().map((question, index) => {
     my_answers.push({quiz_id: question.id, answer_id: null})
 })
 
 function getAnsweredUnanswered(){
-// console.log("checking")
 
-    // my_answers.map(answer => {
-    //     // console.log(answer)
-    //     if(answer.answer_id !== null){
-    //         answered += 1;
-    //     }
-    //     else{
-    //         uanswered += 1;
-    //     }
-    // })
     const answered_ = my_answers.filter(a => a.answer_id !== null)
     const uanswered_ = my_answers.filter(a => a.answer_id === null)
 
