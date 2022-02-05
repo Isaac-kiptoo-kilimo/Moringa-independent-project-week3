@@ -1,6 +1,6 @@
 
 function getMyAnswer(question_id){
-// console.log(my_answers)
+
     const ans_from_my_answers = my_answers.find(ans_from => ans_from.quiz_id === question_id)  
     // console.log(ans_from_my_answers)
     return ans_from_my_answers
@@ -36,12 +36,10 @@ quiz_form.addEventListener('submit', e => submitForGrading(e) )
 
 function submitForGrading(e){
     e.preventDefault()
-    // console.log(my_answers)
 
     const answered_ = my_answers.filter(a => a.answer_id !== null)
     const unanswered_ = my_answers.filter(a => a.answer_id === null)
 
-    // console.log(answered_,unanswered_)
 
     if(unanswered_.length > 0 ){
         alert("You have not answered all the questions")
