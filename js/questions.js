@@ -42,7 +42,6 @@ function escapeHTML(s) {
 }
 
 const answer = (quiz_id, answer) => {
-    // console.log(answer)
     const ans = `
         <div class="answer-holder">	
             <input type="radio" name="quiz_${quiz_id}" onclick="selectAnswer(${quiz_id}, ${answer.id})" />
@@ -75,7 +74,6 @@ const single_question = (question) => {
 function renderAllQuestions(){
     let questions_to_render = ''
     questions.slice().map((question, index) =>{
-        // console.log(index, question)
         questions_to_render += single_question(question)
     })
 
