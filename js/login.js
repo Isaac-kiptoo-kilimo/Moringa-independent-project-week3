@@ -3,18 +3,28 @@ const login = () => {
     const name_ = username.value
     const regno = regNo.value
 
+   if(name_===""|| regno===""){
+       alert("Enter your details please")
+       return
+   }
+   else{
+
     user.loggedInStatus = true
     user.name = name_
     user.regNo = regno
 
     displayAfterLogin()
+   }
+
 }
 
 const logout = () => {
     user.loggedInStatus = false
     user.name = ''
     user.regNo = ''
+
 }
+
 
 const displayAfterLogin  = () => {
     login_holder.classList.add('d-none')
