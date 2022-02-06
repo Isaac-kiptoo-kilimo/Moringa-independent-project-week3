@@ -91,10 +91,10 @@ function submitForGrading(e){
     }
 }
 
-console.log()
-// function retake(){
-//     // my_answers = []
-//     body_holder.classList.remove('d-none')
-//     results_holder.classList.add('d-none')
-//     populateAnswerSheet()
-// }
+
+function retake(){
+    // my_answers = []
+    body_holder.classList.remove('d-none')
+    results_holder.classList.add('d-none')
+    populateAnswerSheet()
+}
