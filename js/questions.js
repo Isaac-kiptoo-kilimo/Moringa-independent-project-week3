@@ -32,7 +32,7 @@ const selectAnswer = (quiz_id, answer_id) => {
     ans_.answer_id = answer_id
     getAnsweredUnanswered()
 }
-
+// escaping html in javaScript
 function escapeHTML(s) {
     let lookup = {
         '&': "&amp;",
@@ -73,6 +73,7 @@ const single_question = (question) => {
 
     return quiz_div
 }
+// fuctionality of the multiple choice to prevent selection of more than one
 
 const single_block_question = (question) => {
     let answers = '';
@@ -117,7 +118,7 @@ const single_block_question = (question) => {
 
 }
 
-
+// rendering all the questions for list display
 function renderAllQuestions(){
     let questions_to_render = ''
     questions.slice().map((question, index) =>{
@@ -126,7 +127,7 @@ function renderAllQuestions(){
 
     questions_holder.innerHTML = questions_to_render
 }
-
+// rendering single question for the block display
 function renderSingleQuestion(quiz_id){
     const quizz = questions.find(question => question.id === quiz_id)
     if(quizz){

@@ -1,3 +1,4 @@
+// selection of elements
 const total_txt = document.querySelectorAll('.total-txt')
 const answered_txt = document.querySelectorAll('.answered-txt')
 const unanswered_txt = document.querySelectorAll('.unanswered-txt')

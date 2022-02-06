@@ -1,3 +1,4 @@
+// selection of active switch
 const selectActiveSwitch = () => {
     if(selectedDisplayStyle === 'list'){
         listSwitch.classList.add('active-switch')

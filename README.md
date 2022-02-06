@@ -57,6 +57,8 @@ Github Profile - [Isaac kiptoo kilimo](https://github.com/Isaac-kiptoo-kilimo)
 
 Email Address-[Isaac kiptoo kilimo] (isaac.kiptoo.kilimo@student.moringaschool.com)
 
+project design link:https://www.figma.com/file/9aqWlWqOC88zJ852omIBRX/QUIZ-BOARD-PROJECT-DESIGN?node-id=31%3A585
+
 
 [Go Back to the top](#Insuarance Website)
 
