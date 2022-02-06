@@ -70,10 +70,10 @@ function submitForGrading(e){
     const unanswered_ = my_answers.filter(a => a.answer_id === null)
 
 
-    // if(unanswered_.length > 0 ){
-    //     alert("You have not answered all the questions")
-    // }
-    // else{
+    if(unanswered_.length > 0 ){
+        alert("You have not answered all the questions")
+    }
+    else{
         const score = calculateScore()
         const output = calculatePercentageAndComment(score.correct)
 
@@ -88,7 +88,7 @@ function submitForGrading(e){
             const element = score_txt[index];
             element.innerHTML = score.correct 
         }
-    // }
+    }
 }
 
 
